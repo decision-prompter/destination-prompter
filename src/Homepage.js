@@ -8,7 +8,7 @@ import price1 from './images/price1.jpg';
 import price2 from './images/price2.jpg';
 import landscape1 from './images/landscape1.jpg';
 import landscape2 from './images/landscape2.jpg';
-import data from './output2.json';
+import data from './output.json';
 
 
 var userChoice = {
@@ -85,9 +85,6 @@ class Homepage extends Component {
     if(currentChoice.dimension === 'timeOfYear') {
       userChoice.timeOfYear = selectedOption;
       this.setState({
-        // userChoice: {
-        //   timeOfYear: selectedOption
-        // },
         currentChoice: {
           promptMessage:"Are you looking for hot or cold?",
           option1:dimensions.climate.climate1,
@@ -97,12 +94,8 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'climate') {
-      //console.log(this.state.userChoice,'toy');
       userChoice.climate = selectedOption;
       this.setState({
-        // userChoice: {
-        //   climate: selectedOption
-        // },
         currentChoice: {
           promptMessage:"Is your budget big or small?",
           option1:dimensions.price.price1,
@@ -112,12 +105,8 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'price') {
-        //console.log(this.state.userChoice,'toy+climate');
       userChoice.price = selectedOption;
       this.setState({
-        // userChoice: {
-        //   price: selectedOption
-        // },
         currentChoice: {
           promptMessage:"Do you prefer an urban setting or a rural one?",
           option1:dimensions.landscape.landscape1,
@@ -127,19 +116,15 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'landscape') {
-        // console.log(this.state.userChoice,'toyclimprice');
       userChoice.landscape = selectedOption;
-      this.setState({
-        // userChoice: {
-        //   landscape: selectedOption
-        // },
-        currentChoice: {
-          promptMessage:"We suggest:",
-          option1:dimensions.landscape.landscape1,
-          option2:dimensions.landscape.landscape2,
-          dimension:'landscape'
-        }
-      })
+      // this.setState({
+      //   currentChoice: {
+      //     promptMessage:"We suggest:",
+      //     option1:dimensions.landscape.landscape1,
+      //     option2:dimensions.landscape.landscape2,
+      //     dimension:'landscape'
+      //   }
+      // })
 
       var filteredData = data.filter((location) => {
         if (
@@ -152,27 +137,44 @@ class Homepage extends Component {
         }
       })
       this.setState({
-        destination:filteredData
+        destination:{
+          promptMessage:"We suggest:",
+          option1:filteredData[0],
+          option2:filteredData[1]
+        }
       })
     }
 
   }
 
   render() {
-    let {currentChoice} = this.state
-    console.log(this.state.destination, "NEW VACA SPOT");
-//to do: map over destination array and return the info(img, city, country) +render
+    let { currentChoice } = this.state
+    let { destination } = this.state
 
-    console.log(userChoice, "userchoice");
     return (
       <div>
-        <div className="imageSection">
-          <div className="prompt">{currentChoice.promptMessage}</div>
-          <div className="row">
-              <img className="box col-small-6" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
-              <img className="box col-small-6"  src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+        { !destination ?
+          <div className="imageSection">
+            <div className="prompt">{currentChoice.promptMessage}</div>
+            <div className="row">
+                <img className="box col-small-6" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+                <img className="box col-small-6"  src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+            </div>
+          </div> :
+          <div className="imageSection">
+            <div className="prompt">{destination.promptMessage}</div>
+            <div className="row">
+                <div className="box col-small-6">
+                  <h2>{destination.option1.City}, {destination.option1.Country} </h2>
+                  <img src={destination.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="chosen destination option1"/>
+                </div>
+                <h2>{destination.option2.City}, {destination.option2.Country} </h2>
+                <img className="box col-small-6" src={destination.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="chosen destinationoption2"/>
+            </div>
           </div>
-        </div>
+
+
+        }
       </div>
     );
   }

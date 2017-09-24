@@ -1,11 +1,17 @@
 *, *:before, *:after {
   box-sizing: border-box; }
+
 body *, body *:before, body *:after {
   box-sizing: inherit; }
+
 body {
   margin: 0px;
   padding: 0px;
   font-family: 'Roboto';
+}
+
+.logo {
+  width:5rem;
 }
 
 .imageSection {
