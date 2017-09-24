@@ -165,14 +165,14 @@ class Homepage extends Component {
         { !destination ?
           <div className="imageSection">
             <div className="prompt">{currentChoice.promptMessage}</div>
-            <div>
-              <div className="box row">
-                <h2>{currentChoice.option1.valueText}</h2>
-                <img className="box col-small-6" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+            <div className="row">
+              <div className="box col-small-6">
+                <img className="box col-small-12" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+                <h2 className="subtitle"><span>{currentChoice.option1.valueText}</span></h2>
               </div>
-              <div className="box row">
-                <h2>{currentChoice.option1.valueText}</h2>
-                  <img className="box col-small-6" src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+              <div className="box col-small-6">
+                <img className="box col-small-12" src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+                <h2 className="subtitle"><span>{currentChoice.option2.valueText}</span></h2>
               </div>
             </div>
           </div> : (!this.state.buttons ?
