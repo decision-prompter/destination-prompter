@@ -8,6 +8,15 @@ import price1 from './images/price1.jpg';
 import price2 from './images/price2.jpg';
 import landscape1 from './images/landscape1.jpg';
 import landscape2 from './images/landscape2.jpg';
+import data from './output2.json';
+
+
+var userChoice = {
+  timeOfYear: null,
+  climate: null,
+  price: null,
+  landscape:null,
+}
 
 var dimensions = {
   timeOfYear: {
@@ -52,15 +61,15 @@ var dimensions = {
   }
 }
 
-
-
 class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       userChoice: {
         timeOfYear: null,
-        climate: null
+        climate: null,
+        price: null,
+        landscape:null,
       },
       currentChoice: {
         promptMessage:"When would you like to leave?",
@@ -74,10 +83,11 @@ class Homepage extends Component {
   _handleClick = (selectedOption) => {
     let {currentChoice} = this.state
     if(currentChoice.dimension === 'timeOfYear') {
+      userChoice.timeOfYear = selectedOption;
       this.setState({
-        userChoice: {
-          timeOfYear: selectedOption
-        },
+        // userChoice: {
+        //   timeOfYear: selectedOption
+        // },
         currentChoice: {
           promptMessage:"Are you looking for hot or cold?",
           option1:dimensions.climate.climate1,
@@ -87,10 +97,12 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'climate') {
+      //console.log(this.state.userChoice,'toy');
+      userChoice.climate = selectedOption;
       this.setState({
-        userChoice: {
-          climate: selectedOption
-        },
+        // userChoice: {
+        //   climate: selectedOption
+        // },
         currentChoice: {
           promptMessage:"Is your budget big or small?",
           option1:dimensions.price.price1,
@@ -100,10 +112,12 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'price') {
+        //console.log(this.state.userChoice,'toy+climate');
+      userChoice.price = selectedOption;
       this.setState({
-        userChoice: {
-          price: selectedOption
-        },
+        // userChoice: {
+        //   price: selectedOption
+        // },
         currentChoice: {
           promptMessage:"Do you prefer an urban setting or a rural one?",
           option1:dimensions.landscape.landscape1,
@@ -113,10 +127,12 @@ class Homepage extends Component {
       })
     }
     else if(currentChoice.dimension === 'landscape') {
+        // console.log(this.state.userChoice,'toyclimprice');
+      userChoice.landscape = selectedOption;
       this.setState({
-        userChoice: {
-          landscape: selectedOption
-        },
+        // userChoice: {
+        //   landscape: selectedOption
+        // },
         currentChoice: {
           promptMessage:"We suggest:",
           option1:dimensions.landscape.landscape1,
@@ -124,12 +140,30 @@ class Homepage extends Component {
           dimension:'landscape'
         }
       })
-    }
-  }
 
+      var filteredData = data.filter((location) => {
+        if (
+          location['Time of Year'] === userChoice.timeOfYear &&
+          location.Climate === userChoice.climate &&
+          location.Price === userChoice.price &&
+          location.Landscape === userChoice.landscape
+        ){
+          return location;
+        }
+      })
+      this.setState({
+        destination:filteredData
+      })
+    }
+
+  }
 
   render() {
     let {currentChoice} = this.state
+    console.log(this.state.destination, "NEW VACA SPOT");
+//to do: map over destination array and return the info(img, city, country) +render
+
+    console.log(userChoice, "userchoice");
     return (
       <div>
         <div className="imageSection">
