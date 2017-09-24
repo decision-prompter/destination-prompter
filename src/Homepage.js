@@ -60,40 +60,48 @@ var dimensions = {
     timeOfYear1: {
       url:timeOfYear1,
       value:'S',
+      valueText:"Summer"
     },
     timeOfYear2: {
       url:timeOfYear2,
       value:'W',
+      valueText:"Winter"
     }
   },
   climate: {
     climate1: {
       url:climate1,
       value:'H',
+      valueText:"Hot"
     },
     climate2: {
       url:climate2,
       value:'C',
+      valueText:"Cold"
     }
   },
   price: {
     price1: {
       url:price1,
       value:'S',
+      valueText:"Smaller Budget"
     },
     price2: {
       url:price2,
       value:'I',
+      valueText:"Bigger Budget"
     }
   },
   landscape: {
     landscape1: {
       url:landscape1,
       value:'C',
+      valueText:"A City"
     },
     landscape2: {
       url:landscape2,
       value:'N',
+      valueText:"A natural environment"
     }
   }
 }
@@ -196,10 +204,12 @@ class Homepage extends Component {
             <div className="prompt">{currentChoice.promptMessage}</div>
             <div className="row">
               <div className="box col-small-6">
-                <img src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+                <img className="box col-small-12" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+                <h2 className="subtitle"><span>{currentChoice.option1.valueText}</span></h2>
               </div>
               <div className="box col-small-6">
-                <img src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+                <img className="box col-small-12" src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+                <h2 className="subtitle"><span>{currentChoice.option2.valueText}</span></h2>
               </div>
             </div>
           </div> : (!this.state.buttons ?
