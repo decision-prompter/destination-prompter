@@ -188,12 +188,7 @@ class Homepage extends Component {
 
     let { currentChoice } = this.state
     let { destination } = this.state
-<<<<<<< HEAD
-    console.log(this.state.chosenCity);
-=======
-      console.log(destination)
 
->>>>>>> 5a51d3ecc96857e7cde2d8a8260e3b84ff624350
     return (
       <div>
         { !destination ?
