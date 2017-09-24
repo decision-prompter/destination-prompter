@@ -8,7 +8,7 @@ import price1 from './images/price1.jpg';
 import price2 from './images/price2.jpg';
 import landscape1 from './images/landscape1.jpg';
 import landscape2 from './images/landscape2.jpg';
-import data from './output.json';
+import data from './final_output.json';
 
 
 var userChoice = {
@@ -164,12 +164,10 @@ class Homepage extends Component {
           <div className="imageSection">
             <div className="prompt">{destination.promptMessage}</div>
             <div className="row">
-                <div className="box col-small-6">
-                  <h2>{destination.option1.City}, {destination.option1.Country} </h2>
-                  <img src={destination.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="chosen destination option1"/>
-                </div>
-                <h2>{destination.option2.City}, {destination.option2.Country} </h2>
-                <img className="box col-small-6" src={destination.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="chosen destinationoption2"/>
+              <h2>{destination.option1.City}, {destination.option1.Country}</h2>
+              <img className="box col-small-6" src={destination.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+              <h2>{destination.option2.City}, {destination.option2.Country}</h2>
+              <img className="box col-small-6"  src={destination.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
             </div>
           </div>
 
