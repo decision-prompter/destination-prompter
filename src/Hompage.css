@@ -12,11 +12,9 @@ body {
 }
 .box1 {
   height: 80vh;
-  background-color: grey;
   margin:1rem;
 }
 .box2 {
-  background-color: black;
   height: 80vh;
   margin:1rem;
 }
