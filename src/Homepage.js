@@ -9,6 +9,7 @@ import price2 from './images/price2.jpg';
 import landscape1 from './images/landscape1.jpg';
 import landscape2 from './images/landscape2.jpg';
 import data from './final_output.json';
+import ButtonLetsGo from './ButtonLetsGo';
 
 
 var userChoice = {
@@ -65,6 +66,7 @@ class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      buttons: false,
       userChoice: {
         timeOfYear: null,
         climate: null,
@@ -117,15 +119,6 @@ class Homepage extends Component {
     }
     else if(currentChoice.dimension === 'landscape') {
       userChoice.landscape = selectedOption;
-      // this.setState({
-      //   currentChoice: {
-      //     promptMessage:"We suggest:",
-      //     option1:dimensions.landscape.landscape1,
-      //     option2:dimensions.landscape.landscape2,
-      //     dimension:'landscape'
-      //   }
-      // })
-
       var filteredData = data.filter((location) => {
         if (
           location['Time of Year'] === userChoice.timeOfYear &&
@@ -138,13 +131,18 @@ class Homepage extends Component {
       })
       this.setState({
         destination:{
-          promptMessage:"We suggest:",
+          promptMessage:"Choose the city you like best:",
           option1:filteredData[0],
           option2:filteredData[1]
         }
       })
     }
+  }
 
+  _handleChoice = () => {
+    this.setState({
+      buttons:true
+    })
   }
 
   render() {
@@ -165,9 +163,10 @@ class Homepage extends Component {
             <div className="prompt">{destination.promptMessage}</div>
             <div className="row">
               <h2>{destination.option1.City}, {destination.option1.Country}</h2>
-              <img className="box col-small-6" src={destination.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+              <img className="box col-small-6" src={destination.option1.url} onClick={this._handleChoice} alt="option1"/>
               <h2>{destination.option2.City}, {destination.option2.Country}</h2>
-              <img className="box col-small-6"  src={destination.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+              <img className="box col-small-6"  src={destination.option2.url} onClick={this._handleChoice} alt="option2"/>
+              {this.state.buttons ? <ButtonLetsGo/> : null}
             </div>
           </div>
 
