@@ -11,6 +11,41 @@ import landscape2 from './images/landscape2.jpg';
 import data from './final_output.json';
 import ButtonLetsGo from './ButtonLetsGo';
 
+import amsterdam from './images/amsterdam.jpg';
+import angradosreis from './images/angra-dos-reis.jpg';
+import austin from './images/austin.jpg';
+import belfast from './images/belfast.jpg';
+import bergen from './images/bergen.jpg';
+import bermuda from './images/bermuda.jpg';
+import buenosaires from './images/buenos-aires.jpg';
+import capetown from './images/cape-town.jpg';
+import chicago from './images/chicago.jpg';
+import collingwood from './images/collingwood.jpg';
+import florianapolis from './images/florianapolis.jpg';
+import fortlauderdale from './images/fort-lauderdale.jpg';
+import guayaquil from './images/guayaquil.jpg';
+import halifax from './images/halifax.jpg';
+import hamburg from './images/hamburg.jpg';
+import jacksonhole from './images/jackson-hole.jpg';
+import madrid from './images/madrid.jpg';
+import marrakesh from './images/marrakesh.jpg';
+import montevideo from './images/montevideo.jpg';
+import norfolk from './images/norfolk.jpg';
+import ottawa from './images/ottawa.jpg';
+import perth from './images/perth.jpg';
+import puntacana from './images/punta-cana.jpg';
+import quebec from './images/quebec.jpg';
+import queenstown from './images/queenstown.jpg';
+import reykjavic from './images/reykjavic.jpg';
+import rio from './images/rio.jpg';
+import salta from './images/salta.jpg';
+import stjohns from './images/stjohns.jpg';
+import tadoussac from './images/tadoussac.jpg';
+import tortola from './images/tortola.jpg';
+import tucson from './images/tucson.jpg';
+import turin from './images/turin.jpg';
+import victoria from './images/victoria.jpg';
+
 
 var userChoice = {
   timeOfYear: null,
@@ -71,7 +106,7 @@ class Homepage extends Component {
         timeOfYear: null,
         climate: null,
         price: null,
-        landscape:null,
+        landscape:null
       },
       currentChoice: {
         promptMessage:"When would you like to leave?",
@@ -83,6 +118,7 @@ class Homepage extends Component {
   }
 
   _handleClick = (selectedOption) => {
+
     let {currentChoice} = this.state
     if(currentChoice.dimension === 'timeOfYear') {
       userChoice.timeOfYear = selectedOption;
@@ -146,8 +182,10 @@ class Homepage extends Component {
   }
 
   render() {
+
     let { currentChoice } = this.state
     let { destination } = this.state
+      console.log(destination)
 
     return (
       <div>
