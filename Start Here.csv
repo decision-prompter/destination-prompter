@@ -1,0 +1,33 @@
+﻿City,Country,Time of Year,Climate,Price,Landscape,Image URL
+Austin,Texas,S,H,S,C,https://unsplash.com/collections/800777/austin-texas?photo=Se_DhTxq90U
+Norfolk,Virginia,S,H,S,N,https://unsplash.com/search/photos/norfolk-virginia?photo=i5RpdwjYK7g
+Turin,Italy,S,H,I,C,https://unsplash.com/search/photos/turin?photo=SjhF0GMI0zY
+Bermuda,Bermuda,S,H,I,N,https://unsplash.com/search/photos/beach?photo=QNmdDWCWKBw
+Belfast,Northern Ireland,S,C,S,C,https://unsplash.com/search/photos/pint?photo=XliG1JGo7oo
+St.John's,Canada,S,C,S,N,https://unsplash.com/search/photos/newfoundland?photo=Fq3WTAAEFHg
+Montevideo,Uruguay,S,C,I,C,https://unsplash.com/search/photos/uruguay?photo=g-9IQxBZ0vs
+Queenstown,New Zealand,S,C,I,N,https://unsplash.com/search/photos/new-zealand?photo=5krgkKmeiMI
+Guayaquil,Ecuador,W,H,S,C,https://unsplash.com/search/photos/ecuador?photo=qOmxP7W8svM
+Angra dos Reis,Brazil,W,H,S,N,https://unsplash.com/search/photos/tropical?photo=U6t80TWJ1DM
+Cape Town,South Africa,W,H,I,C,https://unsplash.com/search/photos/cape-town?photo=6V19Uy-tUhs
+Perth,Australia,W,H,I,N,https://unsplash.com/search/photos/australia?photo=Ybd8rsQTMKA
+Quebec City,Canada,W,C,S,C,https://unsplash.com/search/photos/quebec?photo=6-828bYztjw
+Jackson Hole,USA,W,C,S,N,https://unsplash.com/search/photos/skiing?photo=qVKLnAbqZ_0
+Hamburg,Germany,W,C,I,C,https://unsplash.com/search/photos/hamburg?photo=NE979IvnG-I
+Reykjavic,Iceland,W,C,I,N,https://unsplash.com/search/photos/hottub?photo=mFj2q7BSgLc
+Fort Lauderdale,USA,S,H,S,C,https://unsplash.com/search/photos/florida?photo=PewUcrT1yIw
+Tucson,USA,S,H,S,N,https://unsplash.com/search/photos/arizona?photo=7-xbbchQPaQ
+Madrid,Spain,S,H,I,C,https://unsplash.com/search/photos/madrid?photo=QYeEoTv6Gbw
+Tortola,BVI,S,H,I,N,https://unsplash.com/search/photos/tortola?photo=toB2qdSCi5g
+Ottawa,Canada,S,C,S,C,https://unsplash.com/search/photos/tulips?photo=Nh9WIEBbvmk
+Tadoussac,Canada,S,C,S,N,https://unsplash.com/search/photos/fjord?photo=oOFrXiz8-0A
+Buenos Aires,Argentina,S,C,I,C,https://unsplash.com/collections/881499/buenos-aires?photo=mmuMa7VXL1Y
+Florianapolis,Argentina,S,C,I,N,https://unsplash.com/search/photos/argentina?photo=L9RtyL_hzUg
+Marrakesh,Morocco,W,H,S,C,https://unsplash.com/search/photos/marrakesh?photo=bnXUaEq9xYQ
+Punta Cana,Dominican Republic,W,H,S,N,https://unsplash.com/photos/twlcYzNOUco
+Rio di Janeiro,Brazil,W,H,I,C,https://unsplash.com/photos/9Vypg4Imz-Q
+Victoria,Seychelles,W,H,I,N,https://unsplash.com/photos/muvtuYRwRRU
+Chicago,USA,W,C,S,C,https://unsplash.com/search/photos/chicago?photo=Ye60h3tJuU0
+Collingwood,Canada,W,C,S,N,https://unsplash.com/search/photos/ski?photo=R3tHkgwYaic
+Amsterdam,Holland,W,C,I,C,https://unsplash.com/search/photos/amsterdam?photo=eP93fjCLv4g
+Bergen,Norway,W,C,I,N,https://unsplash.com/search/photos/norway?photo=QSQ43lRbV6E
