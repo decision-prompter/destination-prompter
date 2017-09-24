@@ -201,9 +201,9 @@ class Homepage extends Component {
             <div className="prompt">{destination.promptMessage}</div>
             <div className="row">
               <h2>{destination.option1.City}, {destination.option1.Country}</h2>
-              <img className="box col-small-6" src={destination.option1.url} onClick={this._handleChoice} alt="option1"/>
+              <img className="box col-small-6" src={austin} onClick={this._handleChoice} alt="option1"/>
               <h2>{destination.option2.City}, {destination.option2.Country}</h2>
-              <img className="box col-small-6"  src={destination.option2.url} onClick={this._handleChoice} alt="option2"/>
+              <img className="box col-small-6"  src={fortlauderdale} onClick={this._handleChoice} alt="option2"/>
               {this.state.buttons ? <ButtonLetsGo/> : null}
             </div>
           </div>
