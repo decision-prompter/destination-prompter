@@ -4,7 +4,7 @@
        "Country":"Texas",
        "Price":"S",
        "Time of Year":"S",
-       "Image URL":"./images/austin.jpg",
+       "Image URL":"images/austin.jpg",
        "Landscape":"C",
        "City":"Austin"
     },
@@ -13,7 +13,7 @@
        "Country":"Virginia",
        "Price":"S",
        "Time of Year":"S",
-       "Image URL":"./images/norfolk.jpg",
+       "Image URL":"images/norfolk.jpg",
        "Landscape":"N",
        "City":"Norfolk"
     },
@@ -148,7 +148,7 @@
        "Country":"USA",
        "Price":"S",
        "Time of Year":"S",
-       "Image URL":"https://unsplash.com/search/photos/florida?photo=PewUcrT1yIw",
+       "Image URL":"images/austin.jpg",
        "Landscape":"C",
        "City":"Fort Lauderdale"
     },
