@@ -1,8 +1,12 @@
+# program requires two inputs:
+# arg 1 = input csv file
+# arg 2 = output json file
+
 import sys
 
 def parseCSV():
     inputCSV = open(sys.argv[1])
-    data = dict()
+    outputList = list()
     firstLine = inputCSV.readline()
     firstLineSegments = fixLine(firstLine)
     # data[firstLineSegments[0]] = firstLineSegments[1:]
@@ -10,12 +14,12 @@ def parseCSV():
     for line in inputCSV.readlines():
         lineSegments = fixLine(line)
         dictForLine = dict()
-        for segmentNumber in range(1,len(lineSegments)):
+        for segmentNumber in range(0,len(lineSegments)):
             dictForLine[firstLineSegments[segmentNumber]] = lineSegments[segmentNumber]
-        data[lineSegments[0]] = dictForLine
+        outputList.append(dictForLine)
 
-    outputJSON = open("output.json", "w")
-    dataToWrite = str(data).replace("'", '"')
+    outputJSON = open(sys.argv[2], "w")
+    dataToWrite = str(outputList).replace("'", '"')
     outputJSON.write(dataToWrite)
     inputCSV.close()
     outputJSON.close()
