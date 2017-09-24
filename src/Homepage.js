@@ -10,6 +10,7 @@ import landscape1 from './images/landscape1.jpg';
 import landscape2 from './images/landscape2.jpg';
 import data from './final_output.json';
 import ButtonLetsGo from './ButtonLetsGo';
+import ButtonNotSure from './ButtonNotSure';
 
 
 var userChoice = {
@@ -126,8 +127,9 @@ class Homepage extends Component {
           location.Price === userChoice.price &&
           location.Landscape === userChoice.landscape
         ){
-          return location;
+          return true;
         }
+        return false;
       })
       this.setState({
         destination:{
@@ -139,38 +141,45 @@ class Homepage extends Component {
     }
   }
 
-  _handleChoice = () => {
+  _handleChoice = (chosenCity) => {
     this.setState({
-      buttons:true
+      buttons:true,
+      chosenCity:chosenCity
     })
   }
 
   render() {
     let { currentChoice } = this.state
     let { destination } = this.state
-
+    console.log(this.state.chosenCity);
     return (
       <div>
         { !destination ?
           <div className="imageSection">
             <div className="prompt">{currentChoice.promptMessage}</div>
             <div className="row">
-                <img className="box col-small-6" src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
-                <img className="box col-small-6"  src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+              <div className="box col-small-6">
+                <img src={currentChoice.option1.url} onClick={() => this._handleClick(currentChoice.option1.value)} alt="option1"/>
+              </div>
+              <div className="box col-small-6">
+                <img src={currentChoice.option2.url} onClick={() => this._handleClick(currentChoice.option2.value)} alt="option2"/>
+              </div>
             </div>
-          </div> :
-          <div className="imageSection">
-            <div className="prompt">{destination.promptMessage}</div>
-            <div className="row">
-              <h2>{destination.option1.City}, {destination.option1.Country}</h2>
-              <img className="box col-small-6" src={destination.option1.url} onClick={this._handleChoice} alt="option1"/>
-              <h2>{destination.option2.City}, {destination.option2.Country}</h2>
-              <img className="box col-small-6"  src={destination.option2.url} onClick={this._handleChoice} alt="option2"/>
-              {this.state.buttons ? <ButtonLetsGo/> : null}
+          </div> : (!this.state.buttons ?
+            <div className="imageSection">
+              <div className="prompt">{destination.promptMessage}</div>
+              <div className="row">
+                <h2>{destination.option1.City}, {destination.option1.Country}</h2>
+                <img className="box col-small-6" src={destination.option1.url} onClick={() => this._handleChoice(destination.option1.City)} alt="option1"/>
+                <h2>{destination.option2.City}, {destination.option2.Country}</h2>
+                <img className="box col-small-6"  src={destination.option2.url} onClick={() => this._handleChoice(destination.option2.City)} alt="option2"/>
+              </div>
+            </div> :
+            <div className="imageSection">
+              <div className="row"><a href={`https://www.expedia.ca/Hotel-Search?destination=${this.state.chosenCity}`}><ButtonLetsGo className="box col-small-6"/></a></div>
+              <div className="row"><ButtonNotSure className="box col-small-6"/></div>
             </div>
-          </div>
-
-
+          )
         }
       </div>
     );
