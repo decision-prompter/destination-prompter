@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ButtonLetsGo.css'
+import './ButtonNotSure.css'
 
 export default class ButtonLetsGo extends Component {
   constructor(props){
@@ -11,8 +11,8 @@ export default class ButtonLetsGo extends Component {
   render(){
     return (
       <div>
-        <button className="goButton">
-          <i className="goButtonLogo material-icons"></i>
+        <button className="goButton1">
+          <i className="goButtonLogo1 material-icons">cancel</i>
           <br/>I'm still <br/> not sure
         </button>
       </div>

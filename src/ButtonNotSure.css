@@ -1,4 +1,4 @@
-.goButton {
+.goButton1 {
   border: none;
   background-color: grey;
   border-radius: 5%;
@@ -8,11 +8,11 @@
   color: #fff
 }
 
-.goButton:hover {
+.goButton1:hover {
   opacity: 0.75;
 }
 
-.goButton {
+.goButton1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }

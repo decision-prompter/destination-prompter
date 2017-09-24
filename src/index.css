@@ -95,3 +95,13 @@ span {
 .col-small-6 {
     width: 50%;
 }
+
+.button-center {
+  text-align: center;
+}
+
+.blurb {
+  padding:3rem;
+  font-size: 2rem;
+  margin-bottom: 0;
+}

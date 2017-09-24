@@ -84,24 +84,24 @@ var dimensions = {
     price1: {
       url:price1,
       value:'S',
-      valueText:"Smaller Budget"
+      valueText:"Smaller"
     },
     price2: {
       url:price2,
       value:'I',
-      valueText:"Bigger Budget"
+      valueText:"Bigger"
     }
   },
   landscape: {
     landscape1: {
       url:landscape1,
       value:'C',
-      valueText:"A City"
+      valueText:"City"
     },
     landscape2: {
       url:landscape2,
       value:'N',
-      valueText:"A natural environment"
+      valueText:"Nature"
     }
   }
 }
@@ -118,7 +118,7 @@ class Homepage extends Component {
         landscape:null
       },
       currentChoice: {
-        promptMessage:"When would you like to leave?",
+        promptMessage:"Leaving when?",
         option1:dimensions.timeOfYear.timeOfYear1,
         option2:dimensions.timeOfYear.timeOfYear2,
         dimension:'timeOfYear'
@@ -133,7 +133,7 @@ class Homepage extends Component {
       userChoice.timeOfYear = selectedOption;
       this.setState({
         currentChoice: {
-          promptMessage:"Are you looking for hot or cold?",
+          promptMessage:"Hot or cold climate?",
           option1:dimensions.climate.climate1,
           option2:dimensions.climate.climate2,
           dimension:'climate'
@@ -144,7 +144,7 @@ class Homepage extends Component {
       userChoice.climate = selectedOption;
       this.setState({
         currentChoice: {
-          promptMessage:"Is your budget big or small?",
+          promptMessage:"What's your budget?",
           option1:dimensions.price.price1,
           option2:dimensions.price.price2,
           dimension:'price'
@@ -155,7 +155,7 @@ class Homepage extends Component {
       userChoice.price = selectedOption;
       this.setState({
         currentChoice: {
-          promptMessage:"Do you prefer an urban setting or a rural one?",
+          promptMessage:"What type of landscape?",
           option1:dimensions.landscape.landscape1,
           option2:dimensions.landscape.landscape2,
           dimension:'landscape'
@@ -215,17 +215,25 @@ class Homepage extends Component {
           </div> : (!this.state.buttons ?
             <div className="imageSection">
               <div className="prompt">{destination.promptMessage}</div>
-              <div className="row">
-                <h2>{destination.option1.City}, {destination.option1.Country}</h2>
-                <img className="box col-small-6" src={destination.option1.url} onClick={() => this._handleChoice(destination.option1.City)} alt="option1"/>
-                <h2>{destination.option2.City}, {destination.option2.Country}</h2>
-                <img className="box col-small-6"  src={destination.option2.url} onClick={() => this._handleChoice(destination.option2.City)} alt="option2"/>
+                <div className="row">
+                <div className="box col-small-6">
+                  <img className="box col-small-12" src={austin} onClick={() => this._handleChoice(destination.option1.City)} alt="option2"/>
+                  <h2 className="subtitle"><span>{destination.option1.City}, {destination.option1.Country}.</span></h2>
+                </div>
+                <div className="box col-small-6">
+                  <img className="box col-small-12" src={fortlauderdale} onClick={() => this._handleChoice(destination.option2.City)} alt="option2"/>
+                  <h2 className="subtitle"><span>{destination.option2.City}, {destination.option2.Country}</span></h2>
+                </div>
               </div>
+
+
+
             </div> :
             <div className="imageSection">
-              <div className="row"><a href={`https://www.expedia.ca/Hotel-Search?destination=${this.state.chosenCity}`}><ButtonLetsGo className="box col-small-6"/></a></div>
-              <div className="row"><ButtonNotSure className="box col-small-6"/></div>
-
+              <div className="button-center"><a href={`https://www.expedia.ca/Hotel-Search?destination=${this.state.chosenCity}`}><ButtonLetsGo className="box col-small-6"/></a></div>
+              <h4 className="blurb"> Austin is a vibrant city best known as the heart of the SXSW festival. Long a destination for music lovers, Austin offers fabulous food experiences and a welcoming environment for diverse visitors.
+                Don't forget to watch the nightly show as thousands of bats exit their hiding place beneath a bridge!</h4>
+                  <div className="button-center"><ButtonNotSure className="box col-small-6"/></div>
             </div>
           )
         }

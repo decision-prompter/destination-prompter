@@ -11,9 +11,8 @@ export default class ButtonLetsGo extends Component {
   render(){
     return (
       <div>
-        
         <button className="goButton">
-          <i className="goButtonLogo material-icons">work</i>
+          <i className="goButtonLogo material-icons">airplanemode_active</i>
           <br/>Let's Go!
         </button>
       </div>

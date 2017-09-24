@@ -7,6 +7,12 @@ body {
   padding: 0px;
   font-family: sans-serif;
 }
+
+.blurb {
+  padding:3rem;
+  font-size: 2rem;
+}
+
 .container {
   display: flex;
 }
