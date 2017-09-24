@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
-import timeOfYear1 from './images/timeOfYear1.jpg';
-import timeOfYear2 from './images/timeOfYear2.jpg';
+import timeOfYear1 from './images/summerCalendar.png';
+import timeOfYear2 from './images/winterCalendar.png';
 import climate1 from './images/climate1.jpg';
 import climate2 from './images/climate2.jpg';
 import price1 from './images/price1.jpg';
@@ -118,7 +118,7 @@ class Homepage extends Component {
         landscape:null
       },
       currentChoice: {
-        promptMessage:"When would you like to leave?",
+        promptMessage:"When do you want to depart?",
         option1:dimensions.timeOfYear.timeOfYear1,
         option2:dimensions.timeOfYear.timeOfYear2,
         dimension:'timeOfYear'
@@ -133,7 +133,7 @@ class Homepage extends Component {
       userChoice.timeOfYear = selectedOption;
       this.setState({
         currentChoice: {
-          promptMessage:"Are you looking for hot or cold?",
+          promptMessage:"Are you looking for a hot or cold climate?",
           option1:dimensions.climate.climate1,
           option2:dimensions.climate.climate2,
           dimension:'climate'
