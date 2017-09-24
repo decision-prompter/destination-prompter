@@ -1,0 +1,258 @@
+{
+    "Jackson Hole":{
+       "Climate":"C",
+       "Country":"USA",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/skiing?photo=qVKLnAbqZ_0",
+       "Landscape":"N"
+    },
+    "Belfast":{
+       "Climate":"C",
+       "Country":"Northern Ireland",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/pint?photo=XliG1JGo7oo",
+       "Landscape":"C"
+    },
+    "Chicago":{
+       "Climate":"C",
+       "Country":"USA",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/chicago?photo=Ye60h3tJuU0",
+       "Landscape":"C"
+    },
+    "Angra dos Reis":{
+       "Climate":"H",
+       "Country":"Brazil",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/tropical?photo=U6t80TWJ1DM",
+       "Landscape":"N"
+    },
+    "Rio di Janeiro":{
+       "Climate":"H",
+       "Country":"Brazil",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/photos/9Vypg4Imz-Q",
+       "Landscape":"C"
+    },
+    "Bermuda":{
+       "Climate":"H",
+       "Country":"Bermuda",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/beach?photo=QNmdDWCWKBw",
+       "Landscape":"N"
+    },
+    "Perth":{
+       "Climate":"H",
+       "Country":"Australia",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/australia?photo=Ybd8rsQTMKA",
+       "Landscape":"N"
+    },
+    "Marrakesh":{
+       "Climate":"H",
+       "Country":"Morocco",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/marrakesh?photo=bnXUaEq9xYQ",
+       "Landscape":"C"
+    },
+    "Turin":{
+       "Climate":"H",
+       "Country":"Italy",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/turin?photo=SjhF0GMI0zY",
+       "Landscape":"C"
+    },
+    "Montevideo":{
+       "Climate":"C",
+       "Country":"Uruguay",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/uruguay?photo=g-9IQxBZ0vs",
+       "Landscape":"C"
+    },
+    "Fort Lauderdale":{
+       "Climate":"H",
+       "Country":"USA",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/florida?photo=PewUcrT1yIw",
+       "Landscape":"C"
+    },
+    "Quebec City":{
+       "Climate":"C",
+       "Country":"Canada",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/quebec?photo=6-828bYztjw",
+       "Landscape":"C"
+    },
+    "Austin":{
+       "Climate":"H",
+       "Country":"Texas",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/collections/800777/austin-texas?photo=Se_DhTxq90U",
+       "Landscape":"C"
+    },
+    "Buenos Aires":{
+       "Climate":"C",
+       "Country":"Argentina",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/collections/881499/buenos-aires?photo=mmuMa7VXL1Y",
+       "Landscape":"C"
+    },
+    "Victoria":{
+       "Climate":"H",
+       "Country":"Seychelles",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/photos/muvtuYRwRRU",
+       "Landscape":"N"
+    },
+    "Hamburg":{
+       "Climate":"C",
+       "Country":"Germany",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/hamburg?photo=NE979IvnG-I",
+       "Landscape":"C"
+    },
+    "Guayaquil":{
+       "Climate":"H",
+       "Country":"Ecuador",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/ecuador?photo=qOmxP7W8svM",
+       "Landscape":"C"
+    },
+    "Florianapolis":{
+       "Climate":"C",
+       "Country":"Argentina",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/argentina?photo=L9RtyL_hzUg",
+       "Landscape":"N"
+    },
+    "St.John's":{
+       "Climate":"C",
+       "Country":"Canada",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/newfoundland?photo=Fq3WTAAEFHg",
+       "Landscape":"N"
+    },
+    "Norfolk":{
+       "Climate":"H",
+       "Country":"Virginia",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/norfolk-virginia?photo=i5RpdwjYK7g",
+       "Landscape":"N"
+    },
+    "Queenstown":{
+       "Climate":"C",
+       "Country":"New Zealand",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/new-zealand?photo=5krgkKmeiMI",
+       "Landscape":"N"
+    },
+    "Cape Town":{
+       "Climate":"H",
+       "Country":"South Africa",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/cape-town?photo=6V19Uy-tUhs",
+       "Landscape":"C"
+    },
+    "Tucson":{
+       "Climate":"H",
+       "Country":"USA",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/arizona?photo=7-xbbchQPaQ",
+       "Landscape":"N"
+    },
+    "Ottawa":{
+       "Climate":"C",
+       "Country":"Canada",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/tulips?photo=Nh9WIEBbvmk",
+       "Landscape":"C"
+    },
+    "Collingwood":{
+       "Climate":"C",
+       "Country":"Canada",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/ski?photo=R3tHkgwYaic",
+       "Landscape":"N"
+    },
+    "Tadoussac":{
+       "Climate":"C",
+       "Country":"Canada",
+       "Price":"S",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/fjord?photo=oOFrXiz8-0A",
+       "Landscape":"N"
+    },
+    "Punta Cana":{
+       "Climate":"H",
+       "Country":"Dominican Republic",
+       "Price":"S",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/photos/twlcYzNOUco",
+       "Landscape":"N"
+    },
+    "Madrid":{
+       "Climate":"H",
+       "Country":"Spain",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/madrid?photo=QYeEoTv6Gbw",
+       "Landscape":"C"
+    },
+    "Reykjavic":{
+       "Climate":"C",
+       "Country":"Iceland",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/hottub?photo=mFj2q7BSgLc",
+       "Landscape":"N"
+    },
+    "Tortola":{
+       "Climate":"H",
+       "Country":"BVI",
+       "Price":"I",
+       "Time of Year":"S",
+       "Image URL":"https://unsplash.com/search/photos/tortola?photo=toB2qdSCi5g",
+       "Landscape":"N"
+    },
+    "Amsterdam":{
+       "Climate":"C",
+       "Country":"Holland",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/amsterdam?photo=eP93fjCLv4g",
+       "Landscape":"C"
+    },
+    "Bergen":{
+       "Climate":"C",
+       "Country":"Norway",
+       "Price":"I",
+       "Time of Year":"W",
+       "Image URL":"https://unsplash.com/search/photos/norway?photo=QSQ43lRbV6E",
+       "Landscape":"N"
+    }
+ }
